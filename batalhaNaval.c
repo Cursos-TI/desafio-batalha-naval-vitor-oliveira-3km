@@ -1,40 +1,80 @@
 #include <stdio.h>
-
-// Desafio Batalha Naval - MateCheck
-// Este código inicial serve como base para o desenvolvimento do sistema de Batalha Naval.
-// Siga os comentários para implementar cada parte do desafio.
-
+// Foi a ideia era elaborar uma matriz 10x10. Mas para a melhor visualização no momento de rodar o código, achei melhor acrescentar em 11.
 int main() {
-    // Nível Novato - Posicionamento dos Navios
-    // Sugestão: Declare uma matriz bidimensional para representar o tabuleiro (Ex: int tabuleiro[5][5];).
-    // Sugestão: Posicione dois navios no tabuleiro, um verticalmente e outro horizontalmente.
-    // Sugestão: Utilize `printf` para exibir as coordenadas de cada parte dos navios.
+    char matriz[11][11]; // +1 para incluir rótulos
 
-    // Nível Aventureiro - Expansão do Tabuleiro e Posicionamento Diagonal
-    // Sugestão: Expanda o tabuleiro para uma matriz 10x10.
-    // Sugestão: Posicione quatro navios no tabuleiro, incluindo dois na diagonal.
-    // Sugestão: Exiba o tabuleiro completo no console, mostrando 0 para posições vazias e 3 para posições ocupadas.
+    //Cabeçalho da primeira linha que vai de (A a J)
+    matriz[0][0] = ' '; // canto superior esquerdo para criar um espaço e melhorar a visualização 
+    for (int j = 1; j <= 11; j++) {
+        matriz[0][j] = 'A' + (j - 1);
+    }
 
-    // Nível Mestre - Habilidades Especiais com Matrizes
-    // Sugestão: Crie matrizes para representar habilidades especiais como cone, cruz, e octaedro.
-    // Sugestão: Utilize estruturas de repetição aninhadas para preencher as áreas afetadas por essas habilidades no tabuleiro.
-    // Sugestão: Exiba o tabuleiro com as áreas afetadas, utilizando 0 para áreas não afetadas e 1 para áreas atingidas.
+    // Aqui eu fiz preenchimeno primeira coluna (1 a 10) e depois acrescentei os zeros no resto da matriz
+    for (int i = 1; i <= 11; i++) {
+        matriz[i][0] = '0' + i; // Pode causar erro para i > 9
+        if (i == 11)
+            matriz[i][0] = '1'; // Ajuste para '10'
+        for (int j = 1; j <= 11; j++) {
+            matriz[i][j] = '0'; // Preeche com ponto ou outro caractere que desejar
+        }
+    }
 
-    // Exemplos de exibição das habilidades:
-    // Exemplo para habilidade em cone:
-    // 0 0 1 0 0
-    // 0 1 1 1 0
-    // 1 1 1 1 1
+    // Aqui é a primeira impressão como solicitado pelo Professor sergio Cardoso
+    /*printf("");
+    for (int i = 0; i <= 10; i++) {
+        for (int j = 0; j <= 10; j++) {
+            if (i == 0 && j == 0) {
+                printf("   "); // essa parte eu fiz para criar um espaço no canto superior esquerdo, para ficar mais legível roda
+            } else if (i == 0) {
+                printf(" %c ", matriz[i][j]);
+            } else if (j == 0) {
+                if (i == 10)
+                    printf("%2d ", 10);
+                else
+                    printf(" %d ", i);
+            } else {
+                printf(" %c ", matriz[i][j]);
+            }
+        }
+        printf("\n");
+    }*/
+
+    // Colocando os barcos nas suas devidas posições!
+    matriz [4][4] = '3';
+    matriz [5][4] = '3';
+    matriz [6][4] = '3';
+    matriz [2][6] = '3';
+    matriz [2][7] = '3';
+    matriz [2][8] = '3';
     
-    // Exemplo para habilidade em octaedro:
-    // 0 0 1 0 0
-    // 0 1 1 1 0
-    // 0 0 1 0 0
+    //Forma que eu encontrei para a impressão da matriz levando em conta os barcos !
+    printf("### TABULEIRO DE BATALHA NAVAL ### \n");
+    for (int i = 0; i < 11; i++)
+    {
+        for (int j = 0; j < 11; j++)
+        {
+            if (i == 0 && j == 0) {
+                printf("   ");
+            }else if (i == 0) {
+                printf(" %c ", matriz[i][j]);
 
-    // Exemplo para habilidade em cruz:
-    // 0 0 1 0 0
-    // 1 1 1 1 1
-    // 0 0 1 0 0
+            } else if(j == 0) {
+                if (i == 11)
+                
+                    printf("%2d ", 11);
+                 else 
+                    printf(" %d ", i);
+                } else {
+                    printf(" %c ", matriz[i][j]);
 
-    return 0;
-}
+                }
+                
+                
+            }
+
+        printf("\n");
+            
+        }
+     
+        
+    }
