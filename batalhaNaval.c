@@ -46,6 +46,13 @@ int main() {
     matriz [2][6] = '3';
     matriz [2][7] = '3';
     matriz [2][8] = '3';
+    matriz [7][6] = '3';
+    matriz [6][7] = '3';
+    matriz [5][8] = '3';
+    matriz [3][1] = '3';
+    matriz [2][2] = '3';
+    matriz [1][3] = '3';
+    
     
     //Forma que eu encontrei para a impressão da matriz levando em conta os barcos !
     printf("### TABULEIRO DE BATALHA NAVAL ### \n");
