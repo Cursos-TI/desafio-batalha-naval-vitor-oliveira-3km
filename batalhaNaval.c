@@ -40,20 +40,45 @@ int main() {
     }*/
 
     // Colocando os barcos nas suas devidas posições!
-    matriz [4][4] = '3';
-    matriz [5][4] = '3';
-    matriz [6][4] = '3';
+    
     matriz [2][6] = '3';
     matriz [2][7] = '3';
     matriz [2][8] = '3';
-    matriz [7][6] = '3';
-    matriz [6][7] = '3';
-    matriz [5][8] = '3';
-    matriz [3][1] = '3';
-    matriz [2][2] = '3';
-    matriz [1][3] = '3';
+    matriz [4][10] ='3';
+    matriz [6][8] = '3';
+    matriz [5][9] = '3';
     
+
+    // Adicionando as habilidades de forma simples no tabuleiro!
+    // Cone
     
+    matriz[2][3] = '5';
+    matriz[3][2] = '5';
+    matriz[3][3] = '5'; 
+    matriz[3][4] = '5';
+    matriz[4][1] = '5'; 
+    matriz[4][2] = '5'; 
+    matriz[4][3] = '5';
+    matriz[4][4] = '5';
+    matriz[4][5] = '5';
+
+    // Octaedro
+    matriz[7][7] = '5';
+    matriz[8][7] = '5'; 
+    matriz[8][8] = '5'; 
+    matriz[8][6] = '5';
+    matriz[9][7] = '5';
+
+    //Cruz
+   
+    matriz[6][3] = '5';
+    matriz[7][3] = '5';
+    matriz[8][3] = '5';
+    matriz[7][1] = '5';
+    matriz[7][2] = '5';
+    matriz[7][4] = '5';
+    matriz[7][5] = '5';
+
     //Forma que eu encontrei para a impressão da matriz levando em conta os barcos !
     printf("### TABULEIRO DE BATALHA NAVAL ### \n");
     for (int i = 0; i < 11; i++)
@@ -85,3 +110,4 @@ int main() {
      
         
     }
+
