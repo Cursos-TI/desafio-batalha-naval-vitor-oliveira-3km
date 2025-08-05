@@ -1,5 +1,5 @@
 #include <stdio.h>
-// Foi a ideia era elaborar uma matriz 10x10. Mas para a melhor visualização no momento de rodar o código, achei melhor acrescentar em 11.
+// Foi a ideia era elaborar uma matriz 10x10. Mas para a melhor visualização no momento de rodar o código, achei melhor modificar para  11.
 int main() {
     char matriz[11][11]; // +1 para incluir rótulos
 
